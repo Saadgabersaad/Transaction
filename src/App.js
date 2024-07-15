@@ -44,12 +44,16 @@ function App() {
       </div>
 
       <div>
-        <h1 className=" py-3 fs-2 mb-5">List Transaction By user</h1>
+        <h1 className=" py-3 fs-2 my-5 shadow border-1 rounded-5 bg-info w-50 mx-auto">
+          List Transaction By user
+        </h1>
         <select
-          className="form-select mb-5  w-25 mx-auto"
+          className="form-select  mb-5  w-25 mx-auto"
           onChange={(e) => setSelectedCustomerId(e.target.value)}
         >
-          <option  value="">Select a Customer</option>
+          <option className="options" value="">
+            Select a Customer
+          </option>
           {customers.map((customer) => (
             <option key={customer.id} value={customer.id}>
               {customer.name}
@@ -65,7 +69,9 @@ function App() {
       </div>
 
       <div>
-        <h1 className="my-3 fs-2 py-3">List Transaction By user</h1>
+        <h1 className="my-3 border border-1 shadow rounded-5 bg-info w-50 mx-auto fs-2 py-3">
+          List Transaction By Amount
+        </h1>
         <input
           className="form-control w-25 mx-auto mb-4 "
           type={"text"}
